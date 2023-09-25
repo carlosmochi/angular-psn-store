@@ -1,0 +1,22 @@
+<div class="home__container">
+    <!-- <app-card 
+        gameCover="assets/bt-4.jpg" 
+        cardLabel="Exclusive"
+        gamePrice="129,99"
+        [gameTypes]='["DIGITAL PS4", "DIGITAL PS5"]'></app-card>
+        <app-card 
+        gameCover="assets/bt-1.jpg" 
+        cardLabel="Exclusive"
+        gamePrice="129,99"
+        [gameTypes]='["DIGITAL PS4", "DIGITAL PS5"]'></app-card>
+        <app-card 
+        gameCover="assets/bt-1.jpg" 
+        cardLabel="Exclusive"
+        gamePrice="129,99"
+        [gameTypes]='["DIGITAL PS4", "DIGITAL PS5"]'></app-card> -->
+        <app-card *ngFor="let game of gamesData"
+        gameCover={{game.coverImage}} 
+        cardLabel="Exclusive"
+        gamePrice={{game.price}}
+        [gameTypes]='game.consoles'></app-card>
+</div>
